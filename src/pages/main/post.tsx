@@ -31,7 +31,7 @@ export const Post = (props: Props) => {
     const getLikes = async() => {
         const data = await getDocs(likesDoc);
         setLikes(data.docs.map((doc) => ({userId: doc.data().userId, likeId: doc.id}) ));
-    };1i
+    };
 
     const hasUserLiked = likes?.find((like) => like.userId === user?.uid);
 
